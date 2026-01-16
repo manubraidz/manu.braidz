@@ -61,7 +61,7 @@
 
     <!-- CARD IMAGEM -->
     <div class="card outros">
-      <img src="img/nago lateral.jpeg lateral.jpeg" alt="Cabeça Toda">
+      <img src="img/nago lateral.jpeg" alt="lateral">
       <span>Nago Lateral</span>
     </div>
 
@@ -147,8 +147,23 @@
     modalVideo.src = "";
   }
 </script>
+<script>
+  const starsContainer = document.querySelector('.stars');
 
+  const totalStars = 50; // quantidade de estrelas
 
+  for (let i = 0; i < totalStars; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.animationDelay = Math.random() * 3 + 's';
+    star.style.animationDuration = (2 + Math.random() * 3) + 's';
+
+    starsContainer.appendChild(star);
+  }
+</script>
 
 </body>
 </html>
