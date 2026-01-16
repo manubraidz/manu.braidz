@@ -425,3 +425,184 @@ body {
 .close:hover {
   color: #c77dff;
 }
+/* ===== SERVIÇOS ===== */
+.services {
+  padding: 90px 8%;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.6rem;
+  color: #c77dff;
+  margin-bottom: 50px;
+  text-shadow: 0 0 20px #9d4edd;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: rgba(0,0,0,0.55);
+  border-radius: 25px;
+  padding: 35px 25px;
+  box-shadow: 0 0 25px rgba(199,125,255,0.35);
+  transition: 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 0 45px rgba(199,125,255,0.8);
+}
+
+.service-card .icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+/* ===== WHATSAPP FLUTUANTE ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #25D366, #1ebe5d);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 0 25px rgba(37, 211, 102, 0.8);
+  z-index: 9999;
+  animation: pulseWhats 1.8s infinite;
+  transition: 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 40px rgba(37, 211, 102, 1);
+}
+
+@keyframes pulseWhats {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px rgba(37, 211, 102, 0.9);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+  }
+}
+
+/* Ajuste no celular */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 54px;
+    height: 54px;
+    font-size: 26px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+/* ===== DEPOIMENTOS ===== */
+.testimonials {
+  padding: 90px 8%;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.6rem;
+  color: #c77dff;
+  margin-bottom: 50px;
+  text-shadow: 0 0 20px #9d4edd;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 35px 30px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px rgba(199,125,255,0.35);
+  transition: 0.4s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 0 45px rgba(199,125,255,0.75);
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.testimonial-card span {
+  font-size: 0.9rem;
+  color: #c77dff;
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 58px;
+  height: 58px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+  z-index: 999;
+  transition: 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 35px rgba(37, 211, 102, 0.9);
+}
+html {
+  scroll-behavior: smooth;
+}
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Manu Braids</title>
+  <meta name="description" content="Manu Braids - Tranças nagô, box braids, tiara e estilos personalizados em Feira de Santana. Agende pelo WhatsApp.">
+<meta name="keywords" content="tranças, nagô, box braids, tiara, tranças Feira de Santana, Manu Braids">
+<meta name="author" content="Lisboa Dev">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,7 +15,9 @@
 <div class="neon-bg"></div>
 <div class="stars"></div>
 
+<!-- HERO -->
 <section class="hero">
+
   <h1 class="logo">Manu Braidz <span class="heart">💜</span></h1>
 
   <div class="bio">
@@ -22,19 +28,84 @@
 
   <p class="location">📍 Feira de Santana</p>
 
-  <div class="social">
-    <a href="https://www.instagram.com/manu.braidz" target="_blank">Instagram</a>
+  <a href="https://www.instagram.com/manu.braidz" target="_blank" aria-label="Instagram da Manu Braids">
+Instagram
+</a>
 
     <a
-      href="https://wa.me/5575982872971?text=Olá!%20Tudo%20bem%3F%20Gostaria%20de%20agendar%20um%20horário%20para%20tranças.%20Poderia%20me%20informar%20a%20disponibilidade%2C%20por%20favor%3F"
-      class="btn-agendar"
-      target="_blank"
-    >
-      💜 Agendar pelo WhatsApp
-    </a>
+  href="https://wa.me/5575982872971?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20para%20tranças."
+  class="btn-agendar"
+  target="_blank"
+  aria-label="Agendar horário pelo WhatsApp"
+>
+💜 Agendar pelo WhatsApp
+</a>
+
+<!-- SERVIÇOS -->
+<section class="services">
+  <h2>Serviços</h2>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <span class="icon">✨</span>
+      <h3>Nagô</h3>
+      <p>Tranças delicadas e bem definidas, realçando o visual.</p>
+    </div>
+
+    <div class="service-card">
+      <span class="icon">💜</span>
+      <h3>Tiara</h3>
+      <p>Estilo moderno, elegante e cheio de personalidade.</p>
+    </div>
+
+    <div class="service-card">
+      <span class="icon">🔥</span>
+      <h3>Box Braids</h3>
+      <p>Proteção, beleza e versatilidade em cada detalhe.</p>
+    </div>
+
+    <div class="service-card">
+      <span class="icon">🎨</span>
+      <h3>Personalizadas</h3>
+      <p>Criações únicas feitas especialmente para você.</p>
+    </div>
+
+    <!-- CARD MANUTENÇÃO (ESTRUTURA OK) -->
+    <div class="service-card maintenance-card">
+      <span class="icon">🧼</span>
+      <h3>Manutenção</h3>
+      <p>Cuidado e retoque para manter suas tranças impecáveis.</p>
+    </div>
+
   </div>
 </section>
 
+<!-- DEPOIMENTOS -->
+<section class="testimonials">
+  <h2>O que dizem as clientes</h2>
+
+  <div class="testimonials-grid">
+
+    <div class="testimonial-card">
+      <p>⭐⭐⭐⭐⭐<br>“Amei meu cabelo! Ficou perfeito, super capricho.”</p>
+      <span>— Cliente satisfeita 💜</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p>⭐⭐⭐⭐⭐<br>“Profissional incrível, minhas tranças ficaram impecáveis.”</p>
+      <span>— Cliente fiel ✨</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p>⭐⭐⭐⭐⭐<br>“Atendimento excelente e resultado maravilhoso.”</p>
+      <span>— Cliente feliz 💕</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- PORTFÓLIO -->
 <section class="portfolio">
   <h2>Trabalhos</h2>
 
@@ -47,31 +118,26 @@
 
   <div class="grid">
 
-    <!-- CARD COM VÍDEO -->
     <div class="card video-card nago">
       <video src="assets/videos/preparo.mp4" muted loop playsinline></video>
       <span>Preparo</span>
     </div>
 
-    <!-- CARD IMAGEM -->
     <div class="card outros">
       <img src="img/cabeça toda.jpeg" alt="Cabeça Toda">
       <span>Cabeça Toda</span>
     </div>
 
-    <!-- CARD IMAGEM -->
     <div class="card outros">
-      <img src="img/nago lateral.jpeg" alt="lateral">
-      <span>Nago Lateral</span>
+      <img src="img/nago lateral.jpeg" alt="Nagô Lateral">
+      <span>Nagô Lateral</span>
     </div>
 
-    <!-- CARD IMAGEM -->
     <div class="card tiara">
       <img src="img/nago topo.jpeg" alt="Tiara">
       <span>Tiara</span>
     </div>
 
-    <!-- CARD IMAGEM -->
     <div class="card outros">
       <img src="img/outros.jpeg" alt="Personalizada">
       <span>Personalizada</span>
@@ -80,87 +146,45 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="site-footer">
   <p>
     Feito com <span class="heart">❤</span> por
-    <a href="https://www.instagram.com/liiisboa01" target="_blank">liiisboa01</a>
-    • Para <strong>Manu Braids</strong> •
+    <strong>Lisboa Dev</strong> • Para <strong>Manu Braids</strong> •
     <span id="year"></span>
   </p>
 </footer>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
 
-  /* AUTOPLAY DOS VÍDEOS */
-  document.querySelectorAll('.video-card').forEach(card => {
-    const video = card.querySelector('video');
-
-    card.addEventListener('mouseenter', () => video.play());
-    card.addEventListener('mouseleave', () => video.pause());
-    card.addEventListener('touchstart', () => video.play());
-  });
-</script>  
-<!-- MODAL VISUALIZAÇÃO -->
+<!-- MODAL -->
 <div class="modal" id="mediaModal">
   <span class="close" id="closeModal">✕</span>
-
   <img id="modalImg" style="display:none;">
   <video id="modalVideo" controls style="display:none;"></video>
 </div>
+
+<!-- WHATSAPP FLOAT -->
+<a
+  href="https://wa.me/5575982872971"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Agendar pelo WhatsApp"
+>
+  💬
+</a>
+
+<!-- SCRIPTS -->
 <script>
-  const modal = document.getElementById("mediaModal");
-  const modalImg = document.getElementById("modalImg");
-  const modalVideo = document.getElementById("modalVideo");
-  const closeModal = document.getElementById("closeModal");
-
-  // Abrir imagem
-  document.querySelectorAll(".card img").forEach(img => {
-    img.addEventListener("click", () => {
-      modal.classList.add("active");
-      modalImg.src = img.src;
-      modalImg.style.display = "block";
-      modalVideo.style.display = "none";
-    });
-  });
-
-  // Abrir vídeo
-  document.querySelectorAll(".card video").forEach(video => {
-    video.addEventListener("click", () => {
-      modal.classList.add("active");
-      modalVideo.src = video.src;
-      modalVideo.style.display = "block";
-      modalImg.style.display = "none";
-      modalVideo.play();
-    });
-  });
-
-  // Fechar modal
-  closeModal.addEventListener("click", fecharModal);
-  modal.addEventListener("click", e => {
-    if (e.target === modal) fecharModal();
-  });
-
-  function fecharModal() {
-    modal.classList.remove("active");
-    modalVideo.pause();
-    modalVideo.src = "";
-  }
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 <script>
   const starsContainer = document.querySelector('.stars');
-
-  const totalStars = 50; // quantidade de estrelas
-
-  for (let i = 0; i < totalStars; i++) {
+  for (let i = 0; i < 50; i++) {
     const star = document.createElement('div');
     star.classList.add('star');
-
     star.style.left = Math.random() * 100 + '%';
     star.style.top = Math.random() * 100 + '%';
-    star.style.animationDelay = Math.random() * 3 + 's';
-    star.style.animationDuration = (2 + Math.random() * 3) + 's';
-
     starsContainer.appendChild(star);
   }
 </script>
